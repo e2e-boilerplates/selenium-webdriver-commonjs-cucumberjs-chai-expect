@@ -4,4 +4,4 @@ Feature: Search-key should be included in the title of a search-result page.
   Scenario: Finding some cheese
     Given I am on the Google search page
     When I search for "Cheese!"
-    Then the page title should start with "cheese"
+    Then the page title should start with "Cheese!"

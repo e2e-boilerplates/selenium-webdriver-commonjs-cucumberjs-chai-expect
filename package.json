@@ -1,7 +1,7 @@
 {
-  "name": "selenium-webdriver-cucumber",
+  "name": "selenium-webdriver-commonjs-cucumber-chai",
   "version": "1.0.0",
-  "description": "seleniuv-webdriver end-to-end test automation boilerplate project. Using commonjs, cucumber & chai",
+  "description": "selenium-webdriver end-to-end test automation boilerplate project. Using commonjs, cucumber & chai",
   "scripts": {
     "test": "./node_modules/.bin/cucumber-js",
     "lint": "npx eslint --ext .js ./ --fix"
@@ -20,12 +20,19 @@
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2"
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
   },
   "dependencies": {
     "chai": "^4.2.0",
     "chromedriver": "^77.0.0",
     "cucumber": "^5.1.0",
     "selenium-webdriver": "^4.0.0-alpha.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
