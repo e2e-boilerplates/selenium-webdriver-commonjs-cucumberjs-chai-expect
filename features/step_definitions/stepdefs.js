@@ -1,4 +1,4 @@
-const { Given, When, Then, AfterAll } = require("cucumber");
+const { Given, When, Then, AfterAll, BeforeAll } = require("cucumber");
 const { Builder, By, Capabilities, Key, until } = require("selenium-webdriver");
 const { expect } = require("chai");
 
@@ -8,8 +8,17 @@ const capabilities = Capabilities.chrome();
 capabilities.set("chromeOptions", { w3c: false });
 const browser = new Builder().withCapabilities(capabilities).build();
 
-Given("I am on the Google search page", async () => {
+BeforeAll("end", async () => {
   await browser.get("https://www.google.com");
+});
+
+AfterAll("end", async () => {
+  await browser.quit();
+});
+
+Given("I am on the Google search page", async () => {
+  const title = await browser.getTitle();
+  expect(title).to.equal("Google");
 });
 
 When("I search for {string}", async searchWord => {
@@ -24,8 +33,4 @@ Then("the page title should start with {string}", async searchWord => {
   const title = await browser.getTitle();
   const words = title.split(" ");
   expect(words[0]).to.equal(searchWord);
-});
-
-AfterAll("end", async () => {
-  await browser.quit();
 });
