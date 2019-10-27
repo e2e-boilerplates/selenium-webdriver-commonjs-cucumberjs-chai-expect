@@ -17,6 +17,9 @@ AfterAll("end", async () => {
 });
 
 Given("I am on the Google search page", async () => {
+  const element = await driver.findElement(By.name("q"));
+  await driver.wait(until.elementIsVisible(element), 5000);
+  
   const title = await browser.getTitle();
   expect(title).to.equal("Google");
 });
