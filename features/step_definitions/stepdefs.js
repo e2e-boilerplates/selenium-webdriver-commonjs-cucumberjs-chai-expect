@@ -8,7 +8,7 @@ const capabilities = Capabilities.chrome();
 capabilities.set("chromeOptions", { w3c: false });
 const browser = new Builder().withCapabilities(capabilities).build();
 
-BeforeAll("end", async () => {
+BeforeAll("start", async () => {
   await browser.get("https://www.google.com");
 });
 
