@@ -27,7 +27,7 @@
   "dependencies": {
     "chai": "4.2.0",
     "chromedriver": "78.0.1",
-    "cucumber": "6.0.4",
+    "cucumber": "6.0.5",
     "selenium-webdriver": "4.0.0-alpha.5"
   },
   "husky": {
