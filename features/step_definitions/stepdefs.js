@@ -1,39 +1,30 @@
-const { Given, When, Then, AfterAll, BeforeAll } = require("cucumber");
-const { Builder, By, Capabilities, Key, until } = require("selenium-webdriver");
+const { Given, When, Then } = require("cucumber");
+const { Builder, By } = require("selenium-webdriver");
 const { expect } = require("chai");
+const chrome = require("selenium-webdriver/chrome");
 
 require("chromedriver");
 
-const capabilities = Capabilities.chrome();
-capabilities.set("chromeOptions", { w3c: false });
-const browser = new Builder().withCapabilities(capabilities).build();
+let browser;
+const options = new chrome.Options();
+const chromeOptions = process.env.GITHUB_ACTIONS ? options.headless() : options;
 
-BeforeAll("start", async () => {
-  await browser.get("https://www.google.com");
+Given(/^Navigate to the sandbox$/, () => {
+  browser = new Builder()
+    .forBrowser("chrome")
+    .setChromeOptions(chromeOptions)
+    .build();
+  browser.get("https://e2e-boilerplates.github.io/sandbox/");
 });
 
-AfterAll("end", async () => {
-  await browser.quit();
-});
-
-Given("I am on the Google search page", async () => {
-  const element = await driver.findElement(By.name("q"));
-  await driver.wait(until.elementIsVisible(element), 5000);
-  
+When(/^I am on the sandbox page$/, async () => {
   const title = await browser.getTitle();
-  expect(title).to.equal("Google");
+  expect(title).to.equal("Sandbox");
 });
 
-When("I search for {string}", async searchWord => {
-  const element = await browser.findElement(By.name("q"));
-  element.sendKeys(searchWord, Key.RETURN);
-  element.submit();
-});
-
-Then("the page title should start with {string}", async searchWord => {
-  await browser.wait(until.urlContains("search"), 5000);
-
-  const title = await browser.getTitle();
-  const words = title.split(" ");
-  expect(words[0]).to.equal(searchWord);
+Then(/^The page header should be "([^"]*)"$/, async expectedHeader => {
+  const header = await browser.findElement(By.css("h1"));
+  header.getText().then(text => {
+    expect(text).to.equal(expectedHeader);
+  });
 });

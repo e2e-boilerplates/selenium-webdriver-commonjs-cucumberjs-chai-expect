@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "selenium-webdriver end-to-end test automation boilerplate project. Using commonjs, cucumber & chai",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js",
-    "lint": "npx eslint --ext .js ./ --fix"
+    "lint": "npx eslint --ext .js ./ --fix",
+    "test": "./node_modules/.bin/cucumber-js"
   },
   "keywords": [
     "selenium-webdriver",
