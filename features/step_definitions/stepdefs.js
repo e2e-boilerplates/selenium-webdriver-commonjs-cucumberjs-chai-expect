@@ -1,10 +1,18 @@
-const { Given, When, Then, BeforeAll, AfterAll } = require("cucumber");
+const {
+  Given,
+  When,
+  Then,
+  BeforeAll,
+  AfterAll,
+  setDefaultTimeout
+} = require("cucumber");
 const { Builder, By } = require("selenium-webdriver");
 const { expect } = require("chai");
 const chrome = require("selenium-webdriver/chrome");
 
 require("chromedriver");
 
+setDefaultTimeout(2 * 5000);
 let browser;
 const options = new chrome.Options();
 const chromeOptions = process.env.GITHUB_ACTIONS ? options.headless() : options;
