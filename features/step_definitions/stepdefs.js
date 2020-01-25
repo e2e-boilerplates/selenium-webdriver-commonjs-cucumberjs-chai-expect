@@ -12,7 +12,7 @@ const chrome = require("selenium-webdriver/chrome");
 
 require("chromedriver");
 
-setDefaultTimeout(2 * 5000);
+setDefaultTimeout(4 * 5000);
 let browser;
 const options = new chrome.Options();
 const chromeOptions = process.env.GITHUB_ACTIONS ? options.headless() : options;
