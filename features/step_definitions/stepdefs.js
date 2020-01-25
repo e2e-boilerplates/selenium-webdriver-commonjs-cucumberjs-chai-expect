@@ -9,12 +9,12 @@ let browser;
 const options = new chrome.Options();
 const chromeOptions = process.env.GITHUB_ACTIONS ? options.headless() : options;
 
-Given(/^Navigate to the sandbox$/, () => {
-  browser = new Builder()
+Given(/^Navigate to the sandbox$/, async () => {
+  browser = await new Builder()
     .forBrowser("chrome")
     .setChromeOptions(chromeOptions)
     .build();
-  browser.get("https://e2e-boilerplates.github.io/sandbox/");
+  await browser.get("https://e2e-boilerplates.github.io/sandbox/");
 });
 
 When(/^I am on the sandbox page$/, async () => {
