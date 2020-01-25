@@ -1,4 +1,4 @@
-const { Given, When, Then } = require("cucumber");
+const { Given, When, Then, BeforeAll, AfterAll } = require("cucumber");
 const { Builder, By } = require("selenium-webdriver");
 const { expect } = require("chai");
 const chrome = require("selenium-webdriver/chrome");
@@ -9,11 +9,18 @@ let browser;
 const options = new chrome.Options();
 const chromeOptions = process.env.GITHUB_ACTIONS ? options.headless() : options;
 
-Given(/^Navigate to the sandbox$/, async () => {
+BeforeAll("start", async () => {
   browser = await new Builder()
     .forBrowser("chrome")
     .setChromeOptions(chromeOptions)
     .build();
+});
+
+AfterAll("end", async () => {
+  await browser.quit();
+});
+
+Given(/^Navigate to the sandbox$/, async () => {
   await browser.get("https://e2e-boilerplates.github.io/sandbox/");
 });
 
