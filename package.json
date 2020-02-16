@@ -1,7 +1,7 @@
 {
-  "name": "selenium-webdriver-commonjs-cucumber-chai",
+  "name": "selenium-webdriver-commonjs-cucumber-chai-expect",
   "version": "1.0.0",
-  "description": "selenium-webdriver end-to-end test automation boilerplate project. Using commonjs, cucumber & chai",
+  "description": "selenium-webdriver end-to-end test automation boilerplate, using CommonJS, CucumberJS Chai and Expect",
   "scripts": {
     "lint": "npx eslint --ext .js ./ --fix",
     "test": "./node_modules/.bin/cucumber-js"
