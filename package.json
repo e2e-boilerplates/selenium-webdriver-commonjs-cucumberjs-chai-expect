@@ -1,40 +1,51 @@
 {
-  "name": "selenium-webdriver-commonjs-cucumber-chai-expect",
-  "version": "1.0.0",
-  "description": "selenium-webdriver end-to-end test automation boilerplate, using CommonJS, CucumberJS Chai and Expect",
-  "scripts": {
-    "lint": "npx eslint --ext .js ./ --fix",
-    "test": "./node_modules/.bin/cucumber-js"
-  },
-  "keywords": [
-    "selenium-webdriver",
-    "cucumber",
-    "boilerplate",
-    "example",
-    "e2e",
-    "e2e test"
-  ],
   "author": "Girma Nigusse <xgirma@gmail.com> (https://github.com/xgirma)",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.0.0",
-    "eslint-config-prettier": "6.10.0",
-    "eslint-plugin-import": "2.20.1",
-    "eslint-plugin-prettier": "3.1.2",
-    "husky": "4.2.3",
-    "prettier": "1.19.1",
-    "pretty-quick": "2.0.1"
-  },
   "dependencies": {
     "chai": "4.2.0",
     "chromedriver": "79.0.3",
     "cucumber": "6.0.5",
     "selenium-webdriver": "4.0.0-alpha.5"
   },
+  "description": "selenium-webdriver end-to-end test automation boilerplate, using CommonJS, CucumberJS Chai and Expect",
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-json": "^2.1.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "husky": "4.2.3",
+    "prettier": "1.19.1",
+    "pretty-quick": "2.0.1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "keywords": [
+    "boilerplate",
+    "chai",
+    "commonjs",
+    "cucumberjs",
+    "e2e",
+    "e2e tests",
+    "example",
+    "expect",
+    "integration test",
+    "selenium",
+    "selenium-webdriver",
+    "webdriver"
+  ],
+  "license": "MIT",
+  "name": "selenium-webdriver-commonjs-cucumberjs-chai-expect",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2e-boilerplates/selenium-webdriver-commonjs-cucumberjs-chai-expect.git"
+  },
+  "scripts": {
+    "lint": "npx eslint --ext .js ./ --fix",
+    "test": "./node_modules/.bin/cucumber-js"
+  },
+  "version": "1.0.0"
 }
