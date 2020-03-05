@@ -4,7 +4,7 @@
     "chai": "4.2.0",
     "chromedriver": "79.0.3",
     "cucumber": "6.0.5",
-    "selenium-webdriver": "4.0.0-alpha.5"
+    "selenium-webdriver": "4.0.0-alpha.6"
   },
   "description": "selenium-webdriver end-to-end test automation boilerplate, using CommonJS, CucumberJS Chai and Expect",
   "devDependencies": {
