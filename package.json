@@ -1,12 +1,12 @@
 {
-  "author": "",
+  "author": "Girma Nigusse <xgirma@gmail.com> (https://github.com/xgirma)",
   "dependencies": {
     "chai": "4.2.0",
     "chromedriver": "79.0.3",
     "cucumber": "6.0.5",
     "selenium-webdriver": "4.0.0-alpha.7"
   },
-  "description": "selenium-webdriver end-to-end test automation boilerplate, using CommonJS, CucumberJS Chai and Expect",
+  "description": "selenium webdriver end-to-end test automation boilerplate.",
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -24,10 +24,15 @@
     }
   },
   "keywords": [
+    "boilerplate",
     "chai",
     "commonjs",
     "cucumberjs",
+    "e2e",
+    "e2e tests",
+    "example",
     "expect",
+    "integration test",
     "selenium",
     "selenium-webdriver",
     "webdriver"
