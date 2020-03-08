@@ -1,4 +1,4 @@
-name: selenium-webdriver-commonjs-cucumberjs-chai-expect
+name: selenium-webdriver-commonjs-cucumber-chai-expect
 "on":
   push: null
   schedule:
