@@ -29,7 +29,7 @@ AfterAll("end", async () => {
 });
 
 Given(/^Navigate to the sandbox$/, async () => {
-  await browser.get("https://e2e-boilerplates.github.io/sandbox/");
+  await browser.get("https://e2e-boilerplate.github.io/sandbox/");
 });
 
 When(/^I am on the sandbox page$/, async () => {
