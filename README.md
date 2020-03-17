@@ -1,4 +1,4 @@
-[![GitHub Actions status | e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect](https://github.com/e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect/workflows/selenium-webdriver-commonjs-cucumber-chai-expect/badge.svg)](https://github.com/e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect/actions?workflow=selenium-webdriver-commonjs-cucumber-chai-expect)
+[![GitHub Actions status | e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect](https://github.com/e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect/workflows/selenium-webdriver-commonjs-cucumber-chai-expect/badge.svg)](https://github.com/e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect/actions?workflow=selenium-webdriver-commonjs-cucumber-chai-expect) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Selenium-WebDriver Boilerplate
 
