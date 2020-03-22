@@ -1,5 +1,5 @@
 {
-  "author": "Girma Nigusse <xgirma@gmail.com> (https://github.com/xgirma)",
+  "author": "",
   "bugs": {
     "url": "https://github.com/e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect/issues"
   },
@@ -27,15 +27,10 @@
     }
   },
   "keywords": [
-    "boilerplate",
     "chai",
     "commonjs",
     "cucumber",
-    "e2e",
-    "e2e tests",
-    "example",
     "expect",
-    "integration test",
     "selenium",
     "selenium-webdriver"
   ],
