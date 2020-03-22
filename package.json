@@ -1,5 +1,5 @@
 {
-  "author": "",
+  "author": "Girma Nigusse <xgirma@gmail.com>",
   "bugs": {
     "url": "https://github.com/e2e-boilerplate/selenium-webdriver-commonjs-cucumber-chai-expect/issues"
   },
@@ -7,14 +7,13 @@
     "chai": "4.2.0",
     "chromedriver": "80.0.1",
     "cucumber": "6.0.5",
-    "expect": "25.1.0",
     "selenium-webdriver": "4.0.0-alpha.7"
   },
-  "description": "Selenium-WebDriver end-to-end test automation boilerplate. using Commonjs, Cucumber, Chai and Expect.",
+  "description": "Selenium-WebDriver end-to-end test automation boilerplate. Using Commonjs, Cucumber, Chai and Expect.",
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
-    "eslint-config-prettier": "6.10.1",
+    "eslint-config-prettier": "6.10.0",
     "eslint-plugin-cucumber": "1.4.0",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-prettier": "3.1.2",
@@ -29,10 +28,15 @@
     }
   },
   "keywords": [
+    "boilerplate",
     "chai",
     "commonjs",
     "cucumber",
+    "e2e",
+    "e2e tests",
+    "example",
     "expect",
+    "integration test",
     "selenium",
     "selenium-webdriver"
   ],
