@@ -4,7 +4,7 @@ const {
   Then,
   BeforeAll,
   AfterAll,
-  setDefaultTimeout
+  setDefaultTimeout,
 } = require("cucumber");
 const { Builder, By } = require("selenium-webdriver");
 const { expect } = require("chai");
@@ -37,9 +37,9 @@ When(/^I am on the sandbox page$/, async () => {
   expect(title).to.equal("Sandbox");
 });
 
-Then(/^The page header should be "([^"]*)"$/, async expectedHeader => {
+Then(/^The page header should be "([^"]*)"$/, async (expectedHeader) => {
   const header = await browser.findElement(By.css("h1"));
-  header.getText().then(text => {
+  header.getText().then((text) => {
     expect(text).to.equal(expectedHeader);
   });
 });
