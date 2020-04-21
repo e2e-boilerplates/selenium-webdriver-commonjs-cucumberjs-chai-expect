@@ -9,3 +9,6 @@ Selenium-WebDriver end-to-end test automation boilerplate, Using Commonjs, Cucum
     	2. cd selenium-webdriver-commonjs-cucumber-chai-expect
     	3. npm install
     	4. npm run test
+        
+    
+For more boilerplate click [here](https://github.com/e2e-boilerplate/utils/blob/master/docs/implemented.md)
