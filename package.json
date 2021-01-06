@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "chai": "4.2.0",
-    "chromedriver": "87.0.4",
+    "chromedriver": "87.0.5",
     "cucumber": "6.0.5",
     "selenium-webdriver": "4.0.0-alpha.8",
     "webdriver-manager": "12.1.7"
